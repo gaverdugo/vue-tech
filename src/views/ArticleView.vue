@@ -1,18 +1,15 @@
 <template>
-  <LayoutScreen :topNews="topNews">
-  </LayoutScreen>
+  <div>{{ articleTitle }}</div>
 </template>
 
 <script lang="ts" setup>
-  import { onMounted, ref } from 'vue'
+  import { onMounted } from 'vue'
   import LayoutScreen from '@/components/LayoutScreen.vue'
-
-  const topNews: any[] = ref([])
 
   onMounted(async () => {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/topstories.json`)
     const json = await res.json()
-    topNews.value = json.slice(0, 10)
+    const topNews = json.slice(0, 10)
     console.log(topNews)
   })
 </script>
