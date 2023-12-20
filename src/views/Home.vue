@@ -7,7 +7,7 @@
   import { onMounted, ref } from 'vue'
   import LayoutScreen from '@/components/LayoutScreen.vue'
 
-  const topNews: any[] = ref([])
+  const topNews = ref<string[]>([])
 
   onMounted(async () => {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/topstories.json`)
