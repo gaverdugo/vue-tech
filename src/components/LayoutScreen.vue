@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="rounded rounded-md">
+  <v-layout class="rounded rounded-md h-100">
     <v-app-bar title="Application bar"></v-app-bar>
 
     <v-navigation-drawer>
