@@ -12,7 +12,6 @@
   onMounted(async () => {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/topstories.json`)
     const json = await res.json()
-    topNews.value = json.slice(0, 10)
-    console.log(topNews)
+    topNews.value = json
   })
 </script>
